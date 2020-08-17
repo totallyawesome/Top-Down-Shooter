@@ -1,0 +1,13 @@
+/* 
+  LevelNames.strings
+  Flying Machines
+
+  Created by Rahul Iyer on 04/05/12.
+  Copyright (c) 2012 Rahul Iyer. All rights reserved.
+*/
+
+"1" = "One";
+"2" = "Two";
+"3" = "Red";
+"4" = "RepeatingOrange";
+"5" = "RedAfterRepeat";

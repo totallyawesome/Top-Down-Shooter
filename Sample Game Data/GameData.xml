@@ -1,0 +1,268 @@
+<GameData>
+    <Input>
+        <Controller show="h2bs">
+            <Control type="RIControlButton" command="RICommandFireGuns" isHoldable="NO" XOffset="1"
+            YOffset="1" defaultSprite="button-default.png" pressSprite="button-pressed.png" />
+            <Control type="RIControlJoystick" command="RICommandMove" isAutoCenter="YES" isDPad="NO" numberOfDirections="8" XOffset="1" YOffset="1" backgroundSprite="joystickBack.png" thumbSprite="joystickThumb.png" />
+        </Controller>
+    </Input>
+    <ChapterSpaceMapping>
+        <Chapter name="1" spaceId="0" demoSpaceIndex="2" previewImage="chapter1.png"/>
+        <Chapter name="2" spaceId="1" demoSpaceIndex="2" previewImage="chapter2.png"/>
+    </ChapterSpaceMapping>
+    <Universe>
+        <Space index="0" type="RISpace" isDemo="NO">
+            <BackgroundConfig scrollDuration="120">
+                <BackgroundImages>
+                    <Image index="0" name="fooCopy0.pvr.ccz"/>
+                    <Image index="1" name="fooCopy1.pvr.ccz"/>
+                    <Image index="2" name="fooCopy2.pvr.ccz"/>
+                    <Image index="3" name="fooCopy3.pvr.ccz"/>
+                    <Image index="4" name="fooCopy4.pvr.ccz"/>
+                    <Image index="5" name="fooCopy5.pvr.ccz"/>
+                    <Image index="6" name="fooCopy6.pvr.ccz"/>
+                    <Image index="7" name="fooCopy7.pvr.ccz"/>
+                    <Image index="8" name="fooCopy8.pvr.ccz"/>
+                    <Image index="9" name="fooCopy9.pvr.ccz"/>
+                    <Image index="10" name="fooCopy10.pvr.ccz"/>
+                    <Image index="11" name="fooCopy11.pvr.ccz"/>
+                    <Image index="12" name="fooCopy12.pvr.ccz"/>
+                </BackgroundImages>
+            </BackgroundConfig>
+            <MysteriousForces>
+                <Force type="RIForceAudioManager">
+                    <Command time="1" type="RICommandPlayMusic" track="Music/500663_CriaturasInstrumental.caf"/>
+                    <!--<Command time="30" type="RICommandStopMusic" /> -->
+                </Force>
+                <Force type="RIForceCloudSpawner" rate="1" >
+                    <Command time="2" type="RICommandForceStartSpawning"/>
+                </Force>
+                <Force type="RIForceDialogueSpeaker">
+                    <Command time="3" type="RICommandDialogueSpeak" dialogue="Hello" character="EnemyPilot.png" duration="4"/>
+                </Force>
+                <Force type="RIForceManageSpecialCharacter">
+                    <Wave numberOfObjects="1" faction="RIRoleFriendHero" isDismissable="YES" strategy="RIStrategyPlayerControlled" objectName="dude" spriteFrameName="BAMPrototype2.png" dismissNotification="ByeBye">
+                        <WaveData>
+                            <!-- <WaveKey type="" key="" value="" /> -->
+                        </WaveData>
+                    </Wave>
+                    <Command time="1" type="RICommandCreateSpecialCharacter"/>
+                    <!--<Command time="100" type="RICommandDismissSpecialCharacter"/>-->
+                </Force>
+                <Force type="RIForceEnemySpawner" rate="1" waveType="RIWaveEnemy">
+                    <Wave numberOfObjects="1" faction="RIRoleEnemySidekick" isDismissable="NO" strategy="RIStrategySingleFile" towardsPlayer="YES" inlineWithPlayer="YES" objectName="" spriteFrameName="WhiteBird.png" dismissNotification="">
+                        <WaveData>
+                            <WaveKey type="number" key="duration" value="2.5" />
+                        </WaveData>
+                    </Wave>
+                    <Command time="2" type="RICommandForceStartSpawning"/>
+                    <Command time="60" type="RICommandForceStopSpawning"/>
+                    <Command time="80" type="RICommandForceStartSpawning"/>
+                </Force>
+                <Force type="RIForceEnemySpawner" rate="2" waveType="RIWaveEnemy">
+                    <Wave numberOfObjects="1" faction="RIRoleEnemySidekick" isDismissable="NO" strategy="RIStrategySingleFile" towardsPlayer="NO" inlineWithPlayer="NO" objectName="" spriteFrameName="WhiteBird.png" dismissNotification="">
+                        <WaveData>
+                            <WaveKey type="number" key="duration" value="2.0" />
+                        </WaveData>
+                    </Wave>
+                    <Command time="1" type="RICommandForceStartSpawning"/>
+                    <Command time="60" type="RICommandForceStopSpawning"/>
+                    <Command time="81" type="RICommandForceStartSpawning"/>
+                </Force>
+                <Force type="RIForceEnemySpawner" rate="2" waveType="RIWaveEnemy">
+                    <Wave numberOfObjects="1" faction="RIRoleEnemySidekick" isDismissable="NO" strategy="RIStrategySingleFile" towardsPlayer="NO" inlineWithPlayer="YES" objectName="" spriteFrameName="WhiteBird.png" dismissNotification="">
+                        <WaveData>
+                            <WaveKey type="number" key="duration" value="2.3" />
+                        </WaveData>
+                    </Wave>
+                    <Command time="3" type="RICommandForceStartSpawning"/>
+                    <Command time="60" type="RICommandForceStopSpawning"/>
+                    <Command time="81" type="RICommandForceStartSpawning"/>
+                </Force>
+                <Force type="RIForceEnemySpawner" rate="2" waveType="RIWaveEnemy">
+                    <Wave numberOfObjects="1" faction="RIRoleEnemySidekick" isDismissable="NO" strategy="RIStrategySingleFile" towardsPlayer="YES" inlineWithPlayer="NO" objectName="" spriteFrameName="WhiteBird.png" dismissNotification="">
+                        <WaveData>
+                            <WaveKey type="number" key="duration" value="2.7" />
+                        </WaveData>
+                    </Wave>
+                    <Command time="4" type="RICommandForceStartSpawning"/>
+                    <Command time="60" type="RICommandForceStopSpawning"/>
+                    <Command time="81" type="RICommandForceStartSpawning"/>
+                </Force>
+                <Force type="RIForceEnemySpawner" rate="2.5">
+                    <Wave numberOfObjects="4" faction="RIRoleEnemySidekick" isDismissable="NO" strategy="RIStrategyFilledInvertedPyramid" towardsPlayer="YES" inlineWithPlayer="YES" objectName="" spriteFrameName="WhiteBird.png" dismissNotification="">
+                        <WaveData>
+                            <WaveKey type="number" key="duration" value="2.2" />
+                        </WaveData>
+                    </Wave>
+                    <Command time="2" type="RICommandForceStartSpawning"/>
+                    <Command time="60" type="RICommandForceStopSpawning"/>
+                    <Command time="80" type="RICommandForceStartSpawning"/>
+                </Force>
+            </MysteriousForces>
+        </Space>
+        <Space index="1" type="RISpace" isDemo="NO">
+            <BackgroundConfig scrollDuration="120">
+                <BackgroundImages>
+                    <Image index="0" name="fooCopy0.pvr.ccz"/>
+                    <Image index="1" name="fooCopy1.pvr.ccz"/>
+                    <Image index="2" name="fooCopy2.pvr.ccz"/>
+                    <Image index="3" name="fooCopy3.pvr.ccz"/>
+                    <Image index="4" name="fooCopy4.pvr.ccz"/>
+                    <Image index="5" name="fooCopy5.pvr.ccz"/>
+                    <Image index="6" name="fooCopy6.pvr.ccz"/>
+                    <Image index="7" name="fooCopy7.pvr.ccz"/>
+                    <Image index="8" name="fooCopy8.pvr.ccz"/>
+                    <Image index="9" name="fooCopy9.pvr.ccz"/>
+                    <Image index="10" name="fooCopy10.pvr.ccz"/>
+                    <Image index="11" name="fooCopy11.pvr.ccz"/>
+                    <Image index="12" name="fooCopy12.pvr.ccz"/>
+                </BackgroundImages>
+            </BackgroundConfig>
+            <MysteriousForces>
+                <Force type="RIForceAudioManager">
+                    <Command time="1" type="RICommandPlayMusic" track="Music/500663_CriaturasInstrumental.caf"/>
+                    <!--<Command time="30" type="RICommandStopMusic" /> -->
+                </Force>
+                <Force type="RIForceDialogueSpeaker">
+                    <Command time="3" type="RICommandDialogueSpeak" dialogue="Bye" character="EnemyPilot.png" duration="4"/>
+                </Force>
+                <Force type="RIForceManageSpecialCharacter" >
+                    <Wave numberOfObjects="1" faction="RIRoleFriendHero" isDismissable="YES" strategy="RIStrategyPlayerControlled" objectName="dude" spriteFrameName="BAMPrototype2.png" dismissNotification="ByeBye">
+                        <WaveData>
+                            <!-- <WaveKey type="" key="" value="" /> -->
+                        </WaveData>
+                    </Wave>
+                    
+                    <Command time="1" type="RICommandCreateSpecialCharacter"/>
+                    <Command time="100" type="RICommandDismissSpecialCharacter"/>
+                </Force>
+                <Force type="RIForceEnemySpawner" rate="2.5">
+                    <Wave numberOfObjects="4" faction="RIRoleEnemySidekick" isDismissable="NO" strategy="RIStrategyFilledInvertedPyramid" towardsPlayer="YES" inlineWithPlayer="YES" objectName="" spriteFrameName="Mosquito.png" dismissNotification="">
+                        <WaveData>
+                            <WaveKey type="number" key="duration" value="1.5" />
+                        </WaveData>
+                    </Wave>
+                    <Command time="2" type="RICommandForceStartSpawning"/>
+                    <Command time="60" type="RICommandForceStopSpawning"/>
+                    <Command time="80" type="RICommandForceStartSpawning"/>
+                </Force>
+            </MysteriousForces>
+        </Space>
+        <Space index="2" type="RISpace" isDemo="YES">
+            <BackgroundConfig scrollDuration="120">
+                <BackgroundImages>
+                    <Image index="0" name="fooCopy0.pvr.ccz"/>
+                    <Image index="1" name="fooCopy1.pvr.ccz"/>
+                    <Image index="2" name="fooCopy2.pvr.ccz"/>
+                    <Image index="3" name="fooCopy3.pvr.ccz"/>
+                    <Image index="4" name="fooCopy4.pvr.ccz"/>
+                    <Image index="5" name="fooCopy5.pvr.ccz"/>
+                    <Image index="6" name="fooCopy6.pvr.ccz"/>
+                    <Image index="7" name="fooCopy7.pvr.ccz"/>
+                    <Image index="8" name="fooCopy8.pvr.ccz"/>
+                    <Image index="9" name="fooCopy9.pvr.ccz"/>
+                    <Image index="10" name="fooCopy10.pvr.ccz"/>
+                    <Image index="11" name="fooCopy11.pvr.ccz"/>
+                    <Image index="12" name="fooCopy12.pvr.ccz"/>
+                </BackgroundImages>
+            </BackgroundConfig>
+            <MysteriousForces>
+                <Force type="RIForceAudioManager">
+                    <Command time="1" type="RICommandPlayMusic" track="Music/500540_CriaturasAmbientSymphonic.caf"/>
+                    <!--<Command time="30" type="RICommandStopMusic" /> -->
+                </Force>
+                <Force type="RIForceCloudSpawner" rate="1" >
+                    <Command time="2" type="RICommandForceStartSpawning"/>
+                </Force>
+                <!--     <Force type="RIForceDialogueSpeaker">
+                 <Command time="3" type="RICommandDialogueSpeak" dialogue="Bye" character="EnemyPilot.png" duration="4"/>
+                 </Force>
+                 <Force type="RIForceManageSpecialCharacter" specialCharacterId="dude" waveType="RIWavePlayerControlled">
+                 <Command time="1" type="RICommandCreateSpecialCharacter"/>
+                 <Command time="100" type="RICommandDismissSpecialCharacter"/>
+                 </Force>
+                 <Force type="RIForceEnemySpawner" rate="1.5">
+                 <Command time="2" type="RICommandForceStartSpawning"/>
+                 <Command time="60" type="RICommandForceStopSpawning"/>
+                 <Command time="80" type="RICommandForceStartSpawning"/>
+                 </Force> -->
+            </MysteriousForces>
+        </Space>
+        <!--  <Space index="0" type="RISpaceRepeatingFiniteNumber" numberOfTimesToScroll="3">
+         <ImageConfig>space0.plist</ImageConfig>
+         <scrollDuration>10</scrollDuration>
+         <MysteriousForces>
+         <Force type="RIForceManageSpecialCharacter" specialCharacterId="dude" waveType="RIWavePlayerControlled">
+         <Command time="1" type="RICommandCreateSpecialCharacter"/>
+         </Force>
+         <Force type="RIForceCloudSpawner" strategy="RIStrategyCloudSpawnSimple" rate="3">
+         <Command time="2" type="RICommandForceCloudSpawnerStartSpawning"/>
+         <Command time="25" type="RICommandForceCloudSpawnerStopSpawning" />
+         </Force>
+         </MysteriousForces>
+         </Space>
+         
+         <Space index="1" type="RISpace">
+         <ImageConfig>space1.plist</ImageConfig>
+         <scrollDuration>30</scrollDuration>
+         <MysteriousForces>
+         <Force type="RIForceManageSpecialCharacter" specialCharacterId="dude" waveType="RIWavePlayerControlled">
+         <Command time="1" type="RICommandCreateSpecialCharacter"/>
+         <Command time="20" type="RICommandDismissSpecialCharacter"/>
+         </Force>
+         <Force type="RIForceCloudSpawner" strategy="RIStrategyCloudSpawnSimple" rate="6">
+         <Command time="5" type="RICommandForceCloudSpawnerStartSpawning"/>
+         <Command time="24" type="RICommandForceCloudSpawnerStopSpawning" />
+         </Force>
+         </MysteriousForces>
+         </Space>
+         <Space index="2" type="RISpace">
+         <ImageConfig>space2.plist</ImageConfig>
+         <scrollDuration>45</scrollDuration>
+         <MysteriousForces>
+         <Force type="RIForceManageSpecialCharacter" specialCharacterId="dude" waveType="RIWavePlayerControlled">
+         <Command time="1" type="RICommandCreateSpecialCharacter"/>
+         <Command time="20" type="RICommandDismissSpecialCharacter"/>
+         </Force>
+         <Force type="RIForceCloudSpawner" strategy="RIStrategyCloudSpawnSimple" rate="1.5">
+         <Command time="2" type="RICommandForceCloudSpawnerStartSpawning"/>
+         <Command time="23" type="RICommandForceCloudSpawnerStopSpawning" />
+         <Command time="33" type="RICommandForceCloudSpawnerStartSpawning"/>
+         </Force>
+         </MysteriousForces>
+         </Space>
+         <Space index="3" type="RISpaceRepeatingInfinite" breakFlag="Stoprepeating">
+         <ImageConfig>space1.plist</ImageConfig>
+         <scrollDuration>20</scrollDuration>
+         <MysteriousForces>
+         <Force type="RIForceManageSpecialCharacter" specialCharacterId="dude" waveType="RIWavePlayerControlled">
+         <Command time="1" type="RICommandCreateSpecialCharacter"/>
+         </Force>
+         <Force type="RIForceEnemySpawner" rate="1.5">
+         <Command time="2" type="RICommandForceCloudSpawnerStartSpawning"/>
+         <Command time="10" type="RICommandForceCloudSpawnerStopSpawning"/>
+         </Force>
+         <Force type="RIForceBossSpawner">
+         <Command time="10" type="RICommandSpawnBoss"/>
+         </Force>
+         </MysteriousForces>
+         </Space>
+         <Space index="4" type="RISpace">
+         <ImageConfig>space2.plist</ImageConfig>
+         <scrollDuration>45</scrollDuration>
+         <MysteriousForces>
+         <Force type="RIForceManageSpecialCharacter" specialCharacterId="dude" waveType="RIWavePlayerControlled">
+         <Command time="1" type="RICommandCreateSpecialCharacter"/>
+         <Command time="20" type="RICommandDismissSpecialCharacter"/>
+         </Force>
+         <Force type="RIForceCloudSpawner" strategy="RIStrategyCloudSpawnSimple" rate="1.5">
+         <Command time="2" type="RICommandForceCloudSpawnerStartSpawning"/>
+         <Command time="23" type="RICommandForceCloudSpawnerStopSpawning" />
+         <Command time="33" type="RICommandForceCloudSpawnerStartSpawning"/>
+         </Force>
+         </MysteriousForces>
+         </Space>
+         -->
+    </Universe>
+</GameData>

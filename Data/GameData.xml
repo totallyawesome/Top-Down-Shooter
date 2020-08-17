@@ -1,0 +1,267 @@
+<GameData>
+    <Input>
+        <Controller show="h2bs">
+            <Control type="RIControlButton" command="RICommandFireGuns" isHoldable="NO" XOffset="1"
+            YOffset="1" defaultSprite="button-default.png" pressSprite="button-pressed.png" />
+            <Control type="RIControlJoystick" command="RICommandMove" isAutoCenter="YES" isDPad="NO" numberOfDirections="8" XOffset="1" YOffset="1" backgroundSprite="joystickBack.png" thumbSprite="joystickThumb.png" />
+        </Controller>
+    </Input>
+    <ChapterSpaceMapping>
+        <Chapter name="1" spaceId="0" demoSpaceIndex="1" previewImage="islandspreview.png"/>
+    </ChapterSpaceMapping>
+    <Universe>
+        <Space index="0" type="RISpaceRepeatingInfinite" isDemo="NO">
+            <BackgroundConfig scrollDuration="120">
+                <BackgroundImages>
+                    <Image index="0" name="Islands0.pvr.ccz"/>
+                    <Image index="1" name="Islands1.pvr.ccz"/>
+                    <Image index="2" name="Islands2.pvr.ccz"/>
+                    <Image index="3" name="Islands3.pvr.ccz"/>
+                    <Image index="4" name="Islands4.pvr.ccz"/>
+                    <Image index="5" name="Islands5.pvr.ccz"/>
+                    <Image index="6" name="Islands6.pvr.ccz"/>
+                    <Image index="7" name="Islands7.pvr.ccz"/>
+                    <Image index="8" name="Islands8.pvr.ccz"/>
+                    <Image index="9" name="Islands9.pvr.ccz"/>
+                    <Image index="10" name="Islands10.pvr.ccz"/>
+                    <Image index="11" name="Islands11.pvr.ccz"/>
+                    <Image index="12" name="Islands12.pvr.ccz"/>
+                </BackgroundImages>
+            </BackgroundConfig>
+            <MysteriousForces>
+                <Force type="RIForceAudioManager">
+                    <Command time="1" type="RICommandPlayMusic" track="Music/500663_CriaturasInstrumental.caf"/>
+                </Force>
+               <Force type="RIForceCloudSpawner" rate="1" >
+                    <Command time="2" type="RICommandForceStartSpawning"/>
+                </Force>
+                <Force type="RIForceDialogueSpeaker">
+                    <Command time="1" type="RICommandDialogueSpeak" dialogue="Hello" character="EnemyPilot.png" duration="4"/>
+                    <Command time="6" type="RICommandDialogueSpeak" dialogue="Cool" character="face.png" duration="2"/>
+                    <Command time="9" type="RICommandDialogueSpeak" dialogue="Bye" character="EnemyPilot.png" duration="2"/>
+                </Force>
+                <Force type="RIForceManageSpecialCharacter">
+                    <Wave numberOfObjects="1" faction="RIRoleFriendHero" isDismissable="YES" strategy="RIStrategyPlayerControlled" objectName="dude" spriteFrameName="BAMPrototype2.png" dismissNotification="ByeBye">
+                        <WaveData>
+                        </WaveData>
+                    </Wave>
+                    <Command time="1" type="RICommandCreateSpecialCharacter"/>
+                </Force>
+                <Force type="RIForceEnemySpawner" rate="1.3" waveType="RIWaveEnemy">
+                    <Wave numberOfObjects="1" faction="RIRoleEnemySidekick" isDismissable="NO" strategy="RIStrategySingleFile" objectName="" spriteFrameName="WhiteBird.png" dismissNotification="">
+                        <WaveData>
+                            <WaveKey type="number" key="duration" value="2.5" />
+                           <WaveKey type="bool" key="towardsPlayer" value="YES" />
+                            <WaveKey type="bool" key="inlineWithPlayer" value="YES" />
+                            <WaveKey type="bool" key="isFromBelow" value="NO" />
+                        </WaveData>
+                    </Wave>
+                    <Command time="5" type="RICommandForceStartSpawning"/>
+                </Force>
+                <Force type="RIForceEnemySpawner" rate="1.7" waveType="RIWaveEnemy">
+                    <Wave numberOfObjects="1" faction="RIRoleEnemySidekick" isDismissable="NO" strategy="RIStrategySingleFile" objectName="" spriteFrameName="WhiteBird.png" dismissNotification="">
+                        <WaveData>
+                            <WaveKey type="number" key="duration" value="2.5" />
+                            <WaveKey type="bool" key="towardsPlayer" value="NO" />
+                            <WaveKey type="bool" key="inlineWithPlayer" value="YES" />
+                            <WaveKey type="bool" key="isFromBelow" value="NO" />
+                        </WaveData>
+                    </Wave>
+                    <Command time="5" type="RICommandForceStartSpawning"/>
+                </Force>
+                <Force type="RIForceEnemySpawner" rate="1.9" waveType="RIWaveEnemy">
+                    <Wave numberOfObjects="1" faction="RIRoleEnemySidekick" isDismissable="NO" strategy="RIStrategySingleFile" objectName="" spriteFrameName="WhiteBird.png" dismissNotification="">
+                        <WaveData>
+                            <WaveKey type="number" key="duration" value="2.5" />
+                            <WaveKey type="bool" key="towardsPlayer" value="NO" />
+                            <WaveKey type="bool" key="inlineWithPlayer" value="NO" />
+                            <WaveKey type="bool" key="isFromBelow" value="NO" />
+                        </WaveData>
+                    </Wave>
+                    <Command time="5" type="RICommandForceStartSpawning"/>
+                </Force>
+                <Force type="RIForceEnemySpawner" rate="3" waveType="RIWaveEnemy">
+                    <Wave numberOfObjects="1" faction="RIRoleEnemySidekick" isDismissable="NO" strategy="RIStrategySingleFile" objectName="" spriteFrameName="WhiteBird.png" dismissNotification="">
+                        <WaveData>
+                            <WaveKey type="number" key="duration" value="2.5" />
+                            <WaveKey type="bool" key="towardsPlayer" value="YES" />
+                            <WaveKey type="bool" key="inlineWithPlayer" value="YES" />
+                            <WaveKey type="bool" key="isFromBelow" value="YES" />
+                        </WaveData>
+                    </Wave>
+                    <Command time="5" type="RICommandForceStartSpawning"/>
+                </Force>
+                <Force type="RIForceEnemySpawner" rate="4" waveType="RIWaveEnemy">
+                    <Wave numberOfObjects="1" faction="RIRoleEnemySidekick" isDismissable="NO" strategy="RIStrategySingleFile" objectName="" spriteFrameName="WhiteBird.png" dismissNotification="">
+                        <WaveData>
+                            <WaveKey type="number" key="duration" value="2.5" />
+                            <WaveKey type="bool" key="towardsPlayer" value="YES" />
+                            <WaveKey type="bool" key="inlineWithPlayer" value="NO" />
+                            <WaveKey type="bool" key="isFromBelow" value="YES" />
+                        </WaveData>
+                    </Wave>
+                    <Command time="5" type="RICommandForceStartSpawning"/>
+                </Force>
+                <Force type="RIForceEnemySpawner" rate="4" waveType="RIWaveEnemy">
+                    <Wave numberOfObjects="1" faction="RIRoleEnemySidekick" isDismissable="NO" strategy="RIStrategySingleFile" objectName="" spriteFrameName="WhiteBird.png" dismissNotification="">
+                        <WaveData>
+                            <WaveKey type="number" key="duration" value="2.5" />
+                            <WaveKey type="bool" key="towardsPlayer" value="NO" />
+                            <WaveKey type="bool" key="inlineWithPlayer" value="NO" />
+                            <WaveKey type="bool" key="isFromBelow" value="YES" />
+                        </WaveData>
+                    </Wave>
+                    <Command time="5" type="RICommandForceStartSpawning"/>
+                </Force>
+                <Force type="RIForceEnemySpawner" rate="9" waveType="RIWaveEnemy">
+                    <Wave numberOfObjects="3" faction="RIRoleEnemySidekick" isDismissable="NO" strategy="RIStrategyFilledInvertedPyramid" objectName="" spriteFrameName="BirdOfPrey.png" dismissNotification="">
+                        <WaveData>
+                            <WaveKey type="number" key="duration" value="2.5" />
+                            <WaveKey type="bool" key="towardsPlayer" value="NO" />
+                            <WaveKey type="bool" key="inlineWithPlayer" value="NO" />
+                            <WaveKey type="bool" key="isFromBelow" value="NO" />
+                        </WaveData>
+                    </Wave>
+                    <Command time="5" type="RICommandForceStartSpawning"/>
+                </Force>
+                <Force type="RIForceEnemySpawner" rate="7" waveType="RIWaveEnemy">
+                    <Wave numberOfObjects="3" faction="RIRoleEnemySidekick" isDismissable="NO" strategy="RIStrategySingleFile" objectName="" spriteFrameName="BirdOfPrey.png" dismissNotification="">
+                        <WaveData>
+                            <WaveKey type="number" key="duration" value="2.5" />
+                            <WaveKey type="bool" key="towardsPlayer" value="YES" />
+                            <WaveKey type="bool" key="inlineWithPlayer" value="NO" />
+                            <WaveKey type="bool" key="isFromBelow" value="YES" />
+                        </WaveData>
+                    </Wave>
+                    <Command time="5" type="RICommandForceStartSpawning"/>
+                </Force>
+                <Force type="RIForceEnemySpawner" rate="12" waveType="RIWaveEnemy">
+                    <Wave numberOfObjects="3" faction="RIRoleEnemySidekick" isDismissable="NO" strategy="RIStrategySingleFile" objectName="" spriteFrameName="BirdOfPrey.png" dismissNotification="">
+                        <WaveData>
+                            <WaveKey type="number" key="duration" value="2.5" />
+                            <WaveKey type="bool" key="towardsPlayer" value="YES" />
+                            <WaveKey type="bool" key="inlineWithPlayer" value="YES" />
+                            <WaveKey type="bool" key="isFromBelow" value="YES" />
+                        </WaveData>
+                    </Wave>
+                    <Command time="5" type="RICommandForceStartSpawning"/>
+                </Force>
+            </MysteriousForces>
+        </Space>
+        <Space index="1" type="RISpace" isDemo="YES">
+            <BackgroundConfig scrollDuration="120">
+                <BackgroundImages>
+                    <Image index="0" name="Islands0.pvr.ccz"/>
+                    <Image index="1" name="Islands1.pvr.ccz"/>
+                    <Image index="2" name="Islands2.pvr.ccz"/>
+                    <Image index="3" name="Islands3.pvr.ccz"/>
+                    <Image index="4" name="Islands4.pvr.ccz"/>
+                    <Image index="5" name="Islands5.pvr.ccz"/>
+                    <Image index="6" name="Islands6.pvr.ccz"/>
+                    <Image index="7" name="Islands7.pvr.ccz"/>
+                    <Image index="8" name="Islands8.pvr.ccz"/>
+                    <Image index="9" name="Islands9.pvr.ccz"/>
+                    <Image index="10" name="Islands10.pvr.ccz"/>
+                    <Image index="11" name="Islands11.pvr.ccz"/>
+                    <Image index="12" name="Islands12.pvr.ccz"/>
+                </BackgroundImages>
+            </BackgroundConfig>
+            <MysteriousForces>
+                <Force type="RIForceAudioManager">
+                    <Command time="1" type="RICommandPlayMusic" track="Music/500540_CriaturasAmbientSymphonic.caf"/>
+                </Force>
+                <Force type="RIForceCloudSpawner" rate="1" >
+                    <Command time="2" type="RICommandForceStartSpawning"/>
+                </Force>
+                <Force type="RIForceEnemySpawner" rate="1.3" waveType="RIWaveEnemy">
+                    <Wave numberOfObjects="1" faction="RIRoleEnemySidekick" isDismissable="NO" strategy="RIStrategySingleFile" objectName="" spriteFrameName="WhiteBird.png" dismissNotification="">
+                        <WaveData>
+                            <WaveKey type="number" key="duration" value="2.5" />
+                            <WaveKey type="bool" key="towardsPlayer" value="YES" />
+                            <WaveKey type="bool" key="inlineWithPlayer" value="YES" />
+                            <WaveKey type="bool" key="isFromBelow" value="NO" />
+                        </WaveData>
+                    </Wave>
+                    <Command time="5" type="RICommandForceStartSpawning"/>
+                </Force>
+                <Force type="RIForceEnemySpawner" rate="1.7" waveType="RIWaveEnemy">
+                    <Wave numberOfObjects="1" faction="RIRoleEnemySidekick" isDismissable="NO" strategy="RIStrategySingleFile" objectName="" spriteFrameName="WhiteBird.png" dismissNotification="">
+                        <WaveData>
+                            <WaveKey type="number" key="duration" value="2.5" />
+                            <WaveKey type="bool" key="towardsPlayer" value="NO" />
+                            <WaveKey type="bool" key="inlineWithPlayer" value="YES" />
+                            <WaveKey type="bool" key="isFromBelow" value="NO" />
+                        </WaveData>
+                    </Wave>
+                    <Command time="5" type="RICommandForceStartSpawning"/>
+                </Force>
+                <Force type="RIForceEnemySpawner" rate="1.9" waveType="RIWaveEnemy">
+                    <Wave numberOfObjects="1" faction="RIRoleEnemySidekick" isDismissable="NO" strategy="RIStrategySingleFile" objectName="" spriteFrameName="WhiteBird.png" dismissNotification="">
+                        <WaveData>
+                            <WaveKey type="number" key="duration" value="2.5" />
+                            <WaveKey type="bool" key="towardsPlayer" value="NO" />
+                            <WaveKey type="bool" key="inlineWithPlayer" value="NO" />
+                            <WaveKey type="bool" key="isFromBelow" value="NO" />
+                        </WaveData>
+                    </Wave>
+                    <Command time="5" type="RICommandForceStartSpawning"/>
+                </Force>
+                <Force type="RIForceEnemySpawner" rate="3" waveType="RIWaveEnemy">
+                    <Wave numberOfObjects="1" faction="RIRoleEnemySidekick" isDismissable="NO" strategy="RIStrategySingleFile" objectName="" spriteFrameName="WhiteBird.png" dismissNotification="">
+                        <WaveData>
+                            <WaveKey type="number" key="duration" value="2.5" />
+                            <WaveKey type="bool" key="towardsPlayer" value="YES" />
+                            <WaveKey type="bool" key="inlineWithPlayer" value="YES" />
+                            <WaveKey type="bool" key="isFromBelow" value="YES" />
+                        </WaveData>
+                    </Wave>
+                    <Command time="5" type="RICommandForceStartSpawning"/>
+                </Force>
+                <Force type="RIForceEnemySpawner" rate="4" waveType="RIWaveEnemy">
+                    <Wave numberOfObjects="1" faction="RIRoleEnemySidekick" isDismissable="NO" strategy="RIStrategySingleFile" objectName="" spriteFrameName="WhiteBird.png" dismissNotification="">
+                        <WaveData>
+                            <WaveKey type="number" key="duration" value="2.5" />
+                            <WaveKey type="bool" key="towardsPlayer" value="YES" />
+                            <WaveKey type="bool" key="inlineWithPlayer" value="NO" />
+                            <WaveKey type="bool" key="isFromBelow" value="YES" />
+                        </WaveData>
+                    </Wave>
+                    <Command time="5" type="RICommandForceStartSpawning"/>
+                </Force>
+                <Force type="RIForceEnemySpawner" rate="4" waveType="RIWaveEnemy">
+                    <Wave numberOfObjects="1" faction="RIRoleEnemySidekick" isDismissable="NO" strategy="RIStrategySingleFile" objectName="" spriteFrameName="WhiteBird.png" dismissNotification="">
+                        <WaveData>
+                            <WaveKey type="number" key="duration" value="2.5" />
+                            <WaveKey type="bool" key="towardsPlayer" value="NO" />
+                            <WaveKey type="bool" key="inlineWithPlayer" value="NO" />
+                            <WaveKey type="bool" key="isFromBelow" value="YES" />
+                        </WaveData>
+                    </Wave>
+                    <Command time="5" type="RICommandForceStartSpawning"/>
+                </Force>
+                <Force type="RIForceEnemySpawner" rate="9" waveType="RIWaveEnemy">
+                    <Wave numberOfObjects="3" faction="RIRoleEnemySidekick" isDismissable="NO" strategy="RIStrategyFilledInvertedPyramid" objectName="" spriteFrameName="BirdOfPrey.png" dismissNotification="">
+                        <WaveData>
+                            <WaveKey type="number" key="duration" value="2.5" />
+                            <WaveKey type="bool" key="towardsPlayer" value="NO" />
+                            <WaveKey type="bool" key="inlineWithPlayer" value="NO" />
+                            <WaveKey type="bool" key="isFromBelow" value="NO" />
+                        </WaveData>
+                    </Wave>
+                    <Command time="5" type="RICommandForceStartSpawning"/>
+                </Force>
+                <Force type="RIForceEnemySpawner" rate="7" waveType="RIWaveEnemy">
+                    <Wave numberOfObjects="3" faction="RIRoleEnemySidekick" isDismissable="NO" strategy="RIStrategySingleFile" objectName="" spriteFrameName="BirdOfPrey.png" dismissNotification="">
+                        <WaveData>
+                            <WaveKey type="number" key="duration" value="2.5" />
+                            <WaveKey type="bool" key="towardsPlayer" value="YES" />
+                            <WaveKey type="bool" key="inlineWithPlayer" value="NO" />
+                            <WaveKey type="bool" key="isFromBelow" value="YES" />
+                        </WaveData>
+                    </Wave>
+                    <Command time="5" type="RICommandForceStartSpawning"/>
+                </Force>
+            </MysteriousForces>
+        </Space>
+    </Universe>
+</GameData>

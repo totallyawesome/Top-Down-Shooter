@@ -1,0 +1,13 @@
+/* 
+  PauseMenu.strings
+  Flying Machines
+
+  Created by Rahul Iyer on 16/08/12.
+  Copyright (c) 2012 Rahul Iyer. All rights reserved.
+*/
+
+"Quit game" = "Quit";
+
+"Audio settings" = "Settings";
+
+"Resume game" = "Back to game";

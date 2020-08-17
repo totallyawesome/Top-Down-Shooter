@@ -1,0 +1,13 @@
+/* 
+  Dialogue.strings
+  Flying Machines
+
+  Created by Rahul Iyer on 07/10/12.
+  Copyright (c) 2012 Rahul Iyer. All rights reserved.
+*/
+
+"Hello" = "Unidentified Pilot. Surrender the B.A.M Or you will be fired upon.";
+
+"Cool" = "Cool story bro!";
+
+"Bye" = "You're toast.";

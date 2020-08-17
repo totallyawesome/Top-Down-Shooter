@@ -1,0 +1,30 @@
+/* 
+  Fonts.strings
+  Flying Machines
+
+  Created by Rahul Iyer on 28/04/12.
+  Copyright (c) 2012 Rahul Iyer. All rights reserved.
+*/
+
+//The font used for labels in the main menu
+"Main menu font" = "Chalkduster";
+
+//The font used for labels for menu items in chapter select layer.
+"Chapter select font" = "Chalkduster";
+
+//The font used for labels in the options menu.
+"Options font" = "Chalkduster";
+
+//The font used for labels in the pause menu.
+"Pause menu font" = "Chalkduster";
+
+//The font used for onscreen dialogues. This should refer to the localised font file.
+"Dialogue font" = "Fonts/Arial.fnt";
+
+"kFontScaleHuge" = "6";
+"kFontScaleLarge" = "9";
+"kFontScaleMedium" = "10";
+"kFontScaleSmall" = "12";
+"kFontScaleTiny" = "14";
+
+"Title font" = "Fonts/Chalkduster.fnt";
